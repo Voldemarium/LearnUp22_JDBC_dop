@@ -1,9 +1,9 @@
+
 create schema if not exists test;
 USE test;
 
-DROP TABLE IF EXISTS student;
 CREATE TABLE students (
-id INT PRIMARY KEY AUTO_INCREMENT,
+id SERIAL PRIMARY KEY unique,
 name VARCHAR(80),
 surname VARCHAR(100),
 course_name VARCHAR(100)
